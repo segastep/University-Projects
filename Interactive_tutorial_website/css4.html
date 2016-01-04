@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="faceless" >
+
+    <title>CSS Positioning</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CSC1026</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="html.html">HTML</a>
+                    </li>
+                    <li>
+                        <a href="css.html">CSS</a>
+                    </li>
+                    <li>
+                        <a href="js.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+		<h1></h1>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="html1.html" class="list-group-item"><b>HTML</b></a>
+                    <a href="html1.html" class="list-group-item">What is HTML</a>
+                    <a href="html2.html" class="list-group-item">Tags and Attributes</a>
+                    <a href="html3.html" class="list-group-item">Headings</a>
+                    <a href="html4.html" class="list-group-item">Paragraph Break and Rules</a>
+                    <a href="html5.html" class="list-group-item">Inline Tags</a>
+                    <a href="html6.html" class="list-group-item">Lists</a>
+                    <a href="html7.html" class="list-group-item">Images and Multimedia</a>
+                    <a href="html8.html" class="list-group-item">Tables</a>
+                    <a href="css.html" class="list-group-item"><b>CSS</b></a>
+                    <a href="css.html" class="list-group-item">What is CSS ?</a>
+                    <a href="css1.html" class="list-group-item">Selectors</a>
+                    <a href="css2.html" class="list-group-item">Units</a>
+                    <a href="css3.html" class="list-group-item">CSS box model</a>
+                    <a href="css4.html" class="active list-group-item">CSS Positioning</a>
+                    <a href="css5.html" class="list-group-item">Backgrounds</a>
+                    <a href="js.html" class="list-group-item"><b>JavaScript</b></a>
+                    <a href="js1.html" class="list-group-item">What is JavaScript ?</a>
+                    <a href="js2.html" class="list-group-item">JS Where to </a>
+                    <a href="js3.html" class="list-group-item">Data Types</a>
+                    <a href="js4.html" class="list-group-item">Arrays</a>
+                    <a href="js5.html" class="list-group-item">Booleans</a>
+                    <a href="js6.html" class="list-group-item">Loops</a>
+                    <a href="js7.html" class="list-group-item">Conditional Statements</a>
+                    <a href="js8.html" class="list-group-item">Functions</a>
+                    <a href="js9.html" class="list-group-item">Comments</a>
+                    <a href="js10.html" class="list-group-item">Events</a>
+                </div>
+            </div>
+            <!-- Content Column -->
+            <div class="col-md-9">
+				<hr />
+				
+				<h2>CSS</h2>
+
+				<div class="progress">
+					<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100" style="width: 64%">
+						<span>64%</span>
+					</div>
+				</div>
+
+				<hr />
+					<h3>Positioning</h3>
+
+                    <p>CSS positioning is very important for your website, it is used to set the positioning rules for the elements in your HTML document. With the help of it you are allowed to position an element in the way you like, you can also put elements behind or infront one another or specify what to happen when the content is too big.</p>
+                    <p>Elements can be positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the positioning method.</p>
+					<p>There are four types of positioning static, relative, fixed and absolute.</p>
+
+					<hr>
+                    <h5><strong>Static positioning</strong></h5>
+					<p>All the elements are static positioned by default in HTML e.g they follow the flow of the page and they are not affected by the top, bottom, left, and right properties.</p>
+					
+                    <h5><strong>Relative positioning</strong></h5>
+					<p>Relative positioning allows you to specify a specific offset (left, top etc) which is relative to the element's normal position in HTML flow.</p>
+
+					<div class="col-lg-5">
+			<p>Example Code:</p>
+				<pre>
+div.left {
+	position: relative;
+	left: -20px;
+	background:red;
+}
+
+div.right {
+    position: relative;
+    left: 20px;
+}
+                </pre>
+				</div>
+				<div class="col-lg-6 relative">
+				<p>Example Result:</p>
+				<pre>
+				<div style="position:relative;margin-left:30px;background:blue;width:100px;height:100px"><div style="position: relative;left: -20px;background:red;width:50px;height:50px"></div>
+				</div>
+                </pre>				
+				</div>
+
+				<div class="clearfix"></div>
+				<p>Relatively positioned elements can be moved and overlap other elements in the page, but the space reserved for the element is still preserved in the norlam flow of the page.</p>
+				<br />
+                    <h5><strong>Absolute positioning</strong></h5>
+					<p>When using absolute positioning you have to be extremely careful because your absolute position element is positioned relative to the first parent element that has position other than static, if no such element is found, <html> will be used as a containing block. Absolute positioned elements don't appear in the normal page flow and the document and other elements behave like the absolute position element is not existing. Furhtermore, absolute positioned elements always appear on top of other elements if z-index is not specified. You will see what this means in the next examples.</p>
+				<p>Absolute positioning example :</p>
+				<pre>
+div.top{
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    color:red;
+}
+				</pre>
+				
+				<p>Z-index example:</p>
+				<pre>
+img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}</pre>				
+				<p>When elements are positioned outside the normal flow, they can overlap other elements. The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others).</p>
+				<p>An element can have a positive or negative stack order.An element with greater stack order is always in front of an element with a lower stack order.</p>
+				<ul class="pager">
+					<li class="previous"><a href="css3.html"><span aria-hidden="true">&larr;</span> Previous Tutorial</a>
+					</li>
+					<li class="next"><a href="css5.html" id="example" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Tip" data-placement="left" data-content="Absolute positioned elements do not follow the page flow, be careful how you use this property !">Next Tutorial <span aria-hidden="true">&rarr;</span></a>
+					</li>
+				</ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+    </div>
+    <!-- /.container -->
+
+		<!-- Footer -->
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 pull-left">
+                    <h6>Coded by Georgi Nikolov</h6>
+                </div>
+
+                <div class="col-sm-2 pull-right">
+                    <h6>Copyright &copy; 2015 Newcastle University</h6>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

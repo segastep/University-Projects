@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="faceless" >
+
+    <title>Conditional Statements</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CSC1026</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="html.html">HTML</a>
+                    </li>
+                    <li>
+                        <a href="css.html">CSS</a>
+                    </li>
+                    <li>
+                        <a href="js.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+		<h1></h1>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="html1.html" class="list-group-item"><b>HTML</b></a>
+                    <a href="html1.html" class="list-group-item">What is HTML</a>
+                    <a href="html2.html" class="list-group-item">Tags and Attributes</a>
+                    <a href="html3.html" class="list-group-item">Headings</a>
+                    <a href="html4.html" class="list-group-item">Paragraph Break and Rules</a>
+                    <a href="html5.html" class="list-group-item">Inline Tags</a>
+                    <a href="html6.html" class="list-group-item">Lists</a>
+                    <a href="html7.html" class="list-group-item">Images and Multimedia</a>
+                    <a href="html8.html" class="list-group-item">Tables</a>
+                    <a href="css.html" class="list-group-item"><b>CSS</b></a>
+                    <a href="css1.html" class="list-group-item">What is CSS ?</a>
+                    <a href="css2.html" class="list-group-item">Selectors</a>
+                    <a href="css3.html" class="list-group-item">Units</a>
+                    <a href="css4.html" class="list-group-item">CSS box model</a>
+                    <a href="css5.html" class="list-group-item">CSS Positioning</a>
+                    <a href="css6.html" class="list-group-item">Backgrounds</a>
+                    <a href="js1.html" class="list-group-item"><b>JavaScript</b></a>
+                    <a href="js1.html" class="list-group-item">What is JavaScript ?</a>
+                    <a href="js2.html" class="list-group-item">JS Where to </a>
+                    <a href="js3.html" class="list-group-item">Data Types</a>
+                    <a href="js4.html" class="list-group-item">Arrays</a>
+                    <a href="js5.html" class="list-group-item">Booleans</a>
+                    <a href="js6.html" class="list-group-item">Loops</a>
+                    <a href="js7.html" class="active list-group-item">Conditional Statements</a>
+                    <a href="js8.html" class="list-group-item">Functions</a>
+                    <a href="js9.html" class="list-group-item">Comments</a>
+                    <a href="js10.html" class="list-group-item">Events</a>
+                </div>
+            </div>
+            <!-- Content Column -->
+            <div class="col-md-9">
+				<h2>JavaScript</h2>
+
+				<div class="progress">
+					<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+						<span>70%</span>
+					</div>
+				</div>
+
+				<hr />
+				<h3>Conditional Statements</h3>
+				<p>When you are programming you often need to perform different actions for different conditions. Conditional statements are here to help you with that, they will give you freedom and flexibility.</p>
+				<p>In JavaScript we have the following conditional statements:</p>
+				<ul>
+					<li>Use <b>if</b> to specify a block of code to be executed, if a specified condition is true</li>
+					<li>Use <b>else</b> to specify a block of code to be executed, if the same condition is false</li>
+					<li>Use <b>else if</b> to specify a new condition to test, if the first condition is false</li>
+					<li>Use <b>switch</b> to specify many alternative blocks of code to be executed</li>
+				</ul>
+				
+				<h5><strong>The "if" Statement</strong></h5>
+				<p>Always write if with small letters otherwise JavaScript will give you an error.</p>
+				<p>We use if statements to execude a block of code when a condition is true.</p>
+				<p>Synthax</p>
+				<pre>if (condition) {
+	do something
+}</pre>
+				<p>Example<br />If five is smaller than ten, print five:</p>
+				<pre>if (5 < 10) {
+    number = 10
+}</pre>
+<br />
+				<h5><strong>The else Statement</strong></h5>
+				<p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+				<p>Synthax</p>
+				<pre>if (condition) {
+        do something if condition is true
+} else {
+        if condition is false do something else
+}</pre>
+				<p>Example<br />If John is not hungry, than Steven must be hungry</p>
+				<pre>if (john !=hungry ) {
+    food = "John needs food";
+} else {
+    food = "Steven is hungry";
+}</pre>
+<br />
+				<h5><strong>The else if Statement</strong></h5>
+				<p>The else if statement is used to specify a new condition if the first one was false</p>
+				<p>Synthax</p>
+				<pre>if (condition1) {
+        if condition 1 is true do something
+} else if (condition2) {
+        if condition 1 is false and condition 2 is true do something
+} else {
+        if both are false do something
+}</pre>
+				<p>Example<br />If John is younger than 20 years, print "John is under 20", if not, but he is under 30 years old print "John is under 30" , otherwise print "John is above 30"<br />
+If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, create a "Good day" greeting, otherwise a "Good evening":</p>
+				<pre>if (age < 20) {
+    print = "John is under 20";
+    } else if (age < 30) {
+    print = "John is under 30";
+    } else {
+    print = "John is above 30";
+}</pre>
+				
+				<ul class="pager">
+					<li class="previous"><a href="js6.html"><span aria-hidden="true">&larr;</span> Previous Tutorial</a>
+					</li>
+					<li class="next"><a href="js8.html" id="example" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Tip" data-placement="left" data-content="Remember how to use them, don't forget their syntax !">Next Tutorial <span aria-hidden="true">&rarr;</span></a>
+					</li>
+				</ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+    </div>
+    <!-- /.container -->
+
+		<!-- Footer -->
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 pull-left">
+                    <h6>Coded by Georgi Nikolov</h6>
+                </div>
+
+                <div class="col-sm-2 pull-right">
+                    <h6>Copyright &copy; 2015 Newcastle University</h6>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>

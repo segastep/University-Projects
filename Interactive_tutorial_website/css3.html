@@ -1,0 +1,200 @@
+	<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="faceless" >
+
+    <title>CSS Box model</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CSC1026</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="html.html">HTML</a>
+                    </li>
+                    <li>
+                        <a href="css.html">CSS</a>
+                    </li>
+                    <li>
+                        <a href="js.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+		<h1></h1>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="html1.html" class="list-group-item"><b>HTML</b></a>
+                    <a href="html1.html" class="list-group-item">What is HTML</a>
+                    <a href="html2.html" class="list-group-item">Tags and Attributes</a>
+                    <a href="html3.html" class="list-group-item">Headings</a>
+                    <a href="html4.html" class="list-group-item">Paragraph Break and Rules</a>
+                    <a href="html5.html" class="list-group-item">Inline Tags</a>
+                    <a href="html6.html" class="list-group-item">Lists</a>
+                    <a href="html7.html" class="list-group-item">Images and Multimedia</a>
+                    <a href="html8.html" class="list-group-item">Tables</a>
+                    <a href="css.html" class="list-group-item"><b>CSS</b></a>
+                    <a href="css.html" class="list-group-item">What is CSS ?</a>
+                    <a href="css1.html" class="list-group-item">Selectors</a>
+                    <a href="css2.html" class="list-group-item">Units</a>
+                    <a href="css3.html" class="active list-group-item">CSS box model</a>
+                    <a href="css4.html" class="list-group-item">CSS Positioning</a>
+                    <a href="css5.html" class="list-group-item">Backgrounds</a>
+                    <a href="js.html" class="list-group-item"><b>JavaScript</b></a>
+                    <a href="js1.html" class="list-group-item">What is JavaScript ?</a>
+                    <a href="js2.html" class="list-group-item">JS Where to </a>
+                    <a href="js3.html" class="list-group-item">Data Types</a>
+                    <a href="js4.html" class="list-group-item">Arrays</a>
+                    <a href="js5.html" class="list-group-item">Booleans</a>
+                    <a href="js6.html" class="list-group-item">Loops</a>
+                    <a href="js7.html" class="list-group-item">Conditional Statements</a>
+                    <a href="js8.html" class="list-group-item">Functions</a>
+                    <a href="js9.html" class="list-group-item">Comments</a>
+                    <a href="js10.html" class="list-group-item">Events</a>
+                </div>
+            </div>
+            <!-- Content Column -->
+            <div class="col-md-9">
+				<hr />
+				
+				<h2>CSS</h2>
+
+				<div class="progress">
+					<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+						<span>50%</span>
+					</div>
+				</div>
+
+				<hr />
+					<h3>Box modal</h3>
+
+                    <p>All HTML elements can be considered as boxes and in CSS "box model" is used when we talk about layout and design. Imagine it as a box that wraps around each HTML element. It consists of margin, padding, border and the actual content. The box model allows us to add border around elements and define space between them.</p>
+                    <p>Let's explain what each element means.</p>
+
+            <ul>
+            <li><strong>Content</strong> - The content of the box, where text and images appear</li>
+            <li><strong>Padding</strong> - Clears an area around the content. The  padding is transparent</li>
+            <li><strong>Border</strong> - A border that goes around the padding and content</li>
+            <li><strong>Margin</strong> - Clears an area outside the border. The margin is  transparent</li>
+            </ul>
+			
+		<pre>
+		div {
+			width: 200px;
+			padding: 25px;
+			border: 25px solid black;
+			margin: 25px;
+		}
+		</pre>
+
+		<center><img src="img/css_box_model.png" /></center>
+		<p>So here you probably see the height and width and you ask yourself what is that, so let us explain.</p>
+		<p>In order to set the width and height of an element correctly in all browsers, you need to know how the box model works.</p>
+        
+		<p>Let's say you want to style a <div> element with total width of 250px, so you will need the following code</p>
+		<pre>
+		div {
+			width: 220px;
+			padding: 10px;
+			border: 5px solid gray;
+			margin: 0;
+		}
+		</pre>		
+		
+		<p>Now maybe you are wondering the sum of the pixels is not 250px, yes in the code but let's explain some of the syntax</p>
+		<p>padding: 10px      will put 10px padding to the left and to the right side of the element border 5px will do exactly the same thing we will have border 5px on the left and on the right So the sum is 250px in total.</p>
+		<p>To make it even more clear just follow this simple rules for calculation.</p>
+		<p>The total width of an element should be calculated like this:<br />
+	Total element width = width + left padding + right padding + left border + right border + left margin + right margin</p>
+	
+	<p>The total height of an element should be calculated like this:<br/>
+Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin</p>
+				<ul class="pager">
+					<li class="previous"><a href="css2.html"><span aria-hidden="true">&larr;</span> Previous Tutorial</a>
+					</li>
+					<li class="next"><a href="css4.html" id="example" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Tip" data-placement="left" data-content="Be extremely careful how you are using this properties, if not sure how re-read the tutorial !">Next Tutorial <span aria-hidden="true">&rarr;</span></a>
+					</li>
+				</ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+		</div>
+    </div>
+    <!-- /.container -->
+
+		<!-- Footer -->
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 pull-left">
+                    <h6>Coded by Georgi Nikolov</h6>
+                </div>
+
+                <div class="col-sm-2 pull-right">
+                    <h6>Copyright &copy; 2015 Newcastle University</h6>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="faceless" >
+
+    <title>Tables</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CSC1026</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="html.html">HTML</a>
+                    </li>
+                    <li>
+                        <a href="css.html">CSS</a>
+                    </li>
+                    <li>
+                        <a href="js.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+		<h1></h1>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="html.html" class="list-group-item"><b>HTML</b></a>
+                    <a href="html1.html" class="list-group-item">What is HTML</a>
+                    <a href="html2.html" class="list-group-item">Tags and Attributes</a>
+                    <a href="html3.html" class="list-group-item">Headings</a>
+                    <a href="html4.html" class="list-group-item">Paragraph Break and Rules</a>
+                    <a href="html5.html" class="list-group-item">Inline Tags</a>
+                    <a href="html6.html" class="list-group-item">Lists</a>
+                    <a href="html7.html" class="list-group-item">Images and Multimedia</a>
+                    <a href="html8.html" class="active list-group-item">Tables</a>
+                    <a href="css.html" class="list-group-item"><b>CSS</b></a>
+                    <a href="css1.html" class="list-group-item">What is CSS ?</a>
+                    <a href="css2.html" class="list-group-item">Selectors</a>
+                    <a href="css3.html" class="list-group-item">Units</a>
+                    <a href="css4.html" class="list-group-item">CSS box model</a>
+                    <a href="css5.html" class="list-group-item">CSS Positioning</a>
+                    <a href="css6.html" class="list-group-item">Backgrounds</a>
+                    <a href="js.html" class="list-group-item"><b>JavaScript</b></a>
+                    <a href="js1.html" class="list-group-item">What is JavaScript ?</a>
+                    <a href="js2.html" class="list-group-item">JS Where to </a>
+                    <a href="js3.html" class="list-group-item">Data Types</a>
+                    <a href="js4.html" class="list-group-item">Arrays</a>
+                    <a href="js5.html" class="list-group-item">Booleans</a>
+                    <a href="js6.html" class="list-group-item">Loops</a>
+                    <a href="js7.html" class="list-group-item">Conditional Statements</a>
+                    <a href="js8.html" class="list-group-item">Functions</a>
+                    <a href="js9.html" class="list-group-item">Comments</a>
+                    <a href="js10.html" class="list-group-item">Events</a>
+                </div>
+            </div>
+            <!-- Content Column -->
+            <div class="col-md-9">
+				<h2>HTML</h2>
+
+				<div class="progress">
+					<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100" style="width: 82%">
+						<span>82%</span>
+					</div>
+				</div>
+
+				<hr />
+				<h3>Tables</h3>
+				<p>HTML tables are used, when you want ot arrange content(text, images, links etc.) into rows and columns. To create a table in HTML we use the <code>&lt;table&gt;</code> tag, in which we use the <code>&lt;tr&gt;</code> tag to create rows, and the <code>&lt;td&gt;</code> tag to create data cells. </p>
+
+                    <p>Here is an example of a simple HTML table:</p>
+
+                    <div class="col-lg-10">
+                        <p>Example code:</p>
+                        <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;head&gt;
+                    &lt;title>Title&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;table border="1"&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt;Cell 1 Row 1&lt;/td&gt;
+                    &lt;td&gt;Cell 2 Row 1&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt;Cell 1 Row 2&lt;/td&gt;
+                    &lt;td&gt;Cell 2 Row 2&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;/table&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+
+                    </div>
+
+                    <div class="col-lg-10">
+                        <p>Example Result:</p>
+
+                        <div id="sampBorder">
+                            <samp>
+                                    <table border="1">
+                                        <tr>
+                                            <td>Cell 1 Row 1</td>
+                                            <td>Cell 2 Row 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cell 1 Row 2</td>
+                                            <td>Cell 2 Row 2</td>
+                                        </tr>
+                                    </table>
+                                </samp>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <br />
+                        <p>To add a heading to the columns, we use the <code>&lt;th&gt;</code> tag in the top row of our table.</p>
+
+                        <p>Here is a simple example:</p>
+                    </div>
+
+                    <div class="col-lg-10">
+                        <p>Example code:</p>
+                        <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;head&gt;
+                    &lt;title>Title&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;table border="1"&gt;
+                    &lt;tr&gt;
+                    &lt;th&gt;Column 1&lt;/th&gt;
+                    &lt;th&gt;Column 2&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt;Cell 1 Row 1&lt;/td&gt;
+                    &lt;td&gt;Cell 2 Row 1&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt;Cell 1 Row 2&lt;/td&gt;
+                    &lt;td&gt;Cell 2 Row 2&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;/table&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+
+                    </div>
+
+                    <div class="col-lg-10">
+                        <p>Example Result:</p>
+
+                        <div id="sampBorder">
+                            <samp>
+                                <table border="1">
+                                    <tr>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell 1 Row 1</td>
+                                        <td>Cell 2 Row 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell 1 Row 2</td>
+                                        <td>Cell 2 Row 2</td>
+                                    </tr>
+                                </table>
+                            </samp>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <br />
+                        <p>There are some other useful tags and attributes that you can use, which i am going to list them in the table below. But the table below will be styled with CSS, so you can see what can a table look like with some simple CSS.</p>
+                        <br />
+                    </div>
+
+                    <table class="table table-hover">
+                        <tr class="info">
+                            <th>Tag/Attribute</th>
+                            <th>Use</th>
+                        </tr>
+                        <tr>
+                            <td>&ltcaption&gt</td>
+                            <td>Adds a caption to the table</td>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>Sets the table border</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>Display width of table</td>
+                        </tr>
+                        <tr>
+                            <td>cellspacing</td>
+                            <td>Sets the distance between cells</td>
+                        </tr>
+                        <tr>
+                            <td>cellpadding</td>
+                            <td>Sets the padding of the cells</td>
+                        </tr>
+
+                        <tr class="info">
+                            <th>Cell Attributes</th>
+                            <th>Use</th>
+                        </tr>
+                        <tr>
+                            <td>colspan</td>
+                            <td>Number of columns cell should span</td>
+                        </tr>
+                        <tr>
+                            <td>rowspan</td>
+                            <td>Number of rows cell should span</td>
+                        </tr>
+                        <tr>
+                            <td>scope</td>
+                            <td>Direction in which a cell provides header information</td>
+                        </tr>
+                        <tr>
+                            <td>summary</td>
+                            <td>Provides a text summary of table purpose/contents</td>
+                        </tr>
+                    </table>
+
+				<ul class="pager">
+					<li class="previous"><a href="html7.html"><span aria-hidden="true">&larr;</span> Previous Tutorial</a>
+					</li>
+					<li class="next"><a href="html_que.html" id="example" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Tip" data-placement="left" data-content="Table data &lt;td&gt; are the data containers of the table. They can contain all sorts of HTML elements.">Start HTML Quiz <span aria-hidden="true">&rarr;</span></a>
+					</li>
+				</ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+    </div>
+    <!-- /.container -->
+
+		<!-- Footer -->
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 pull-left">
+                    <h6>Coded by Georgi Nikolov</h6>
+                </div>
+
+                <div class="col-sm-2 pull-right">
+                    <h6>Copyright &copy; 2015 Newcastle University</h6>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

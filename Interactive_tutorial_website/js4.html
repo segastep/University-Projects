@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="faceless" >
+
+    <title>Arrays</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CSC1026</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="html.html">HTML</a>
+                    </li>
+                    <li>
+                        <a href="css.html">CSS</a>
+                    </li>
+                    <li>
+                        <a href="js.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+		<h1></h1>
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="html1.html" class="list-group-item"><b>HTML</b></a>
+                    <a href="html1.html" class="list-group-item">What is HTML</a>
+                    <a href="html2.html" class="list-group-item">Tags and Attributes</a>
+                    <a href="html3.html" class="list-group-item">Headings</a>
+                    <a href="html4.html" class="list-group-item">Paragraph Break and Rules</a>
+                    <a href="html5.html" class="list-group-item">Inline Tags</a>
+                    <a href="html6.html" class="list-group-item">Lists</a>
+                    <a href="html7.html" class="list-group-item">Images and Multimedia</a>
+                    <a href="html8.html" class="list-group-item">Tables</a>
+                    <a href="css.html" class="list-group-item"><b>CSS</b></a>
+                    <a href="css1.html" class="list-group-item">What is CSS ?</a>
+                    <a href="css2.html" class="list-group-item">Selectors</a>
+                    <a href="css3.html" class="list-group-item">Units</a>
+                    <a href="css4.html" class="list-group-item">CSS box model</a>
+                    <a href="css5.html" class="list-group-item">CSS Positioning</a>
+                    <a href="css6.html" class="list-group-item">Backgrounds</a>
+                    <a href="js1.html" class="list-group-item"><b>JavaScript</b></a>
+                    <a href="js1.html" class="list-group-item">What is JavaScript ?</a>
+                    <a href="js2.html" class="list-group-item">JS Where to </a>
+                    <a href="js3.html" class="list-group-item">Data Types</a>
+                    <a href="js4.html" class="active list-group-item">Arrays</a>
+                    <a href="js5.html" class="list-group-item">Booleans</a>
+                    <a href="js6.html" class="list-group-item">Loops</a>
+                    <a href="js7.html" class="list-group-item">Conditional Statements</a>
+                    <a href="js8.html" class="list-group-item">Functions</a>
+                    <a href="js9.html" class="list-group-item">Comments</a>
+                    <a href="js10.html" class="list-group-item">Events</a>
+                </div>
+            </div>
+            <!-- Content Column -->
+            <div class="col-md-9">
+				<h2>JavaScript</h2>
+
+				<div class="progress">
+					<div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+						<span>40%</span>
+					</div>
+				</div>
+
+				<hr />
+				<h3>Arrays</h3>
+				<p>In JS like in other programming languages arrays are used to store multiple values in a single variable. Arrays are pretty useful in this tutorial we will try to teach you the basics of using arrays. Arrays save time and effort remember it !</p>
+				
+				<p>The first thing we will learn is how to display an array, in this tutorial we will dipslay arrays inside a &lt;p&gt; element as this is the most common situation.</p>
+				<p>Example</p>
+				<pre>
+				&lt;p id="array"&gt;&lt;p&gt;
+				&lt;script&gt;
+				var names = [ "Rich", "Jamie", "Sue"];
+				document.getElementByID("array").innerHTML = names;
+				&lt;/script&gt;				
+				</pre>
+				
+				<p>The first line (in the script) creates an array named names. The second line "finds" the element with id="array", and "displays" the array in the "innerHTML" of it.</p>
+				<strong>What is an Array ?</strong>
+				<p>Array is a special variable, which can hold more than one value at a time, imagine you want to declare 30 names, instead of declareing each name as a variable which is time consumeing you can use an array.</p>
+				<p>So array is a variable that can consist of number of values with one and a same types of data or different.</p>
+				<p>You can acess each element in the array by looping around the array as each component in the array has a specific position, but we will talk about that later....</p>
+				<p>Creating an array:<br />
+				var array-name = [item1, item2, ...];<br /><br />
+				This is the easiest way it's called array literal<br /><br />
+				JS Array can be declared using this approach:<br />
+				var cars = new Array("Rich", "Sue", "James");
+				</p>
+				<strong>Access the Elements of an Array</strong>
+				<p>You refer to an array element by referring to the <b>index number</b>.<br />This statement accesses the value of the first element in cars:</p>
+				<p>var name = name[0];</p>
+				<p>This statement modifies the first element in cars:</p>
+				<p>name[0] = "Rich";</p>
+				
+				<strong>Objects in an Array</strong>
+				<p>JS variables can be objects. Arrays are special kind of objects, due to this you can have variables of different types in same Array. In JS array we can have orher arrays, objecs or functions.</p>
+				<pre>
+				myArray[0] = Date.now;
+				myArray[1] = myFunction;
+				myArray[2] = myCars;
+				</pre>
+				<p>Arrays are special type of object, if use typeof operator on an Array in JS it will return object for array, but yet they are best described as arrays because they use numbers to acess it's elements.</p>
+				<p>In this example name[0] returns Rich</p>
+				<pre>var name = [ "Rich", "Sue", "James"]</pre>
+				<p>Objects use names to acess its  "members". In this example person.FirstName returns Rich</p>
+				<pre>var person = {firstName:"Rich", lastName:"Jones", age:32};</pre>
+				<strong>Arrays properties and methods</strong>
+				<p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
+				<p>Examples</p>
+				<pre>var x = cars.length;         // The length property returns the number of elements in cars
+var y = cars.sort();         // The sort() method sort cars in alphabetical order</pre>
+				<p></p>
+
+				<strong>The lenght property</strong>
+				<p>The lenght property returns the number of elements in the array</p>
+				<pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.length;                    // the length of fruits is 4</pre>
+
+				<strong>Adding Array Elements</strong>
+				<p>The easiest way to add a new element to an array is to use the length property:</p>
+				<p>Example</p>
+				<pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Lemon";  // adds a new element (Lemon) to fruits</pre>
+				<p>Adding elements with high indexes can create undefined "holes" in an array:</p>
+
+				<p>Example</p>
+				<pre>var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[10] = "Lemon";             // adds a new element (Lemon) to fruits</pre>
+				<strong>Looping Array Elements</strong>
+				<p>The best way to loop through an array, is using a "for" loop:</p>
+				<p>Example</p>
+				<pre>var index;
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+for (index = 0; index < fruits.length; index++) {
+}</pre>
+
+				<ul class="pager">
+					<li class="previous"><a href="js3.html"><span aria-hidden="true">&larr;</span> Previous Tutorial</a>
+					</li>
+					<li class="next"><a href="js5.html" id="example" tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Tip" data-placement="left" data-content="Never put a comma after the last element. The effect is inconsistent across browsers.">Next Tutorial <span aria-hidden="true">&rarr;</span></a>
+					</li>
+				</ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+    </div>
+    <!-- /.container -->
+
+		<!-- Footer -->
+	<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 pull-left">
+                    <h6>Coded by Georgi Nikolov</h6>
+                </div>
+
+                <div class="col-sm-2 pull-right">
+                    <h6>Copyright &copy; 2015 Newcastle University</h6>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+	
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>	
+</body>
+
+</html>

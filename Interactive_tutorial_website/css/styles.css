@@ -1,0 +1,46 @@
+footer {background: none repeat scroll 0 0 #333;  color: #eee; padding:20px; margin:0}
+.btn-block{background: none repeat scroll 0 0 #444;}
+.table > thead > tr > td.info,
+.table > tbody > tr > td.info,
+.table > tfoot > tr > td.info,
+.table > thead > tr > th.info,
+.table > tbody > tr > th.info,
+.table > tfoot > tr > th.info,
+.table > thead > tr.info > td,
+.table > tbody > tr.info > td,
+.table > tfoot > tr.info > td,
+.table > thead > tr.info > th,
+.table > tbody > tr.info > th,
+.table > tfoot > tr.info > th
+{background:#333;color:#fff}
+
+.table-hover > tbody > tr > td.info:hover,
+.table-hover > tbody > tr > th.info:hover,
+.table-hover > tbody > tr.info:hover > td,
+.table-hover > tbody > tr:hover > .info,
+.table-hover > tbody > tr.info:hover > th {
+  background-color: #666;
+}
+
+#sampBorder {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.progress-bar-info {background-color:#555}
+.pager li > a, .pager li > span {
+    background-color: #333;
+    border: 1px solid #ddd;
+    border-radius: 0px;	
+    color: white;
+    display: inline-block;
+    padding: 5px 14px;
+}
+.pager li > a:focus, .pager li > a:hover {
+    background-color: #666;
+	<!--border-radius: 0px;-->
+    text-decoration: none;
+}
+.green{color:green}
+.red_text{color:red}
