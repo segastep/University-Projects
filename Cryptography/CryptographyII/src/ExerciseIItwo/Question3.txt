@@ -1,0 +1,17 @@
+Georgi Nikolov 										140367900
+
+Answer to QUESTION 3:
+How can one use the resulting session keys keyA and keyB to create a secure channel for further communication between Alice and Bob?
+Explain what protection measures you need to set up and how to get the inputs for those.
+
+Answer:
+To establish a secure channel apart from generating session keys, both parties must negotiate on what cipher to use and agree
+on a common TLS protocol version, then the actual key exchange is happening once that is done, we need to make sure the channel
+provides security and confidentiality, a single common session key is not enough even though it DH it’s private to both parties.
+We need key derivation, to achieve that we can use the session key from DH key exchange and random salt as inputs to create expanded
+key while preserving the randomness of the Session key – Kext = HMAC(salt,sessionKey), then for message authentication calls
+and encryptions for both directions we take index I from Kext  and using HMAC as pseudo random function, then we use the resulting
+key from that function and use it for encryption and decryption, assuming all parties in the exchange have chosen a common
+encryption/decryption cipher. To establish the channel itself, sideA processes the key exchange parameters sent by sideB,
+checks the message integrity by verifying the MAC, the returns encrypted acknowledgement to sideB, sideB decrypts the message
+with the negotiated symmetric key, verifies the MAC and if all checks pass, then the tunnel is established.

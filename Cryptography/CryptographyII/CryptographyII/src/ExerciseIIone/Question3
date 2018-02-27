@@ -1,0 +1,23 @@
+Georgi Nikolov                                              140367900
+
+Question3
+Make observations: Consider	the	moduli	N used	in	the	Questions 2a	and	2b, respectively. What
+special	properties	do the	number N in	Questions	2a	and	2b have or	not	have? What	does	this	mean
+for	the	linear	equations	in	ZN? Give	the	reason	for	the	result	of	Question	2b.
+
+Answer:
+We observe that N value for question 2A is a probable prime value, thanks to this gcd(a,N)=1 which means we can find
+multiplicative inverse of A in Zn.
+However, if we observe N in question 2B, by performing a simple check we can see that it's a composite number, which
+implies that if A is a composite as well, which is in fact, gcd(a,N) will return value greater than zero, which means
+we cannot find multiplicative inverse of A in Zn, because gcd(a,N) > 1, this is according to what we have been taught in
+class. And this is what was implemented as a solution, but in a reality, this does not mean we cannot find a solution.
+Just for the sake of completeness, I will explain how we can solve the second equation instead of returning zero.
+when we compute gcd(a,N)  and this returns some number D. If D doest NOT divide B, there is no solution. If D|b, there
+are D solutions.
+If D|b we can use the following strategy to find the solutions:
+1. Reduce equation by dividing A,B,N by D
+(equation now looks like a*x=b)
+2. Multiply both sides of the equation by A|gcd(A,N) to find solution for x0
+3. All other general solutions, can be computed by the following following formula:
+x=x0+k(N|D) for k in (0,1,..., d-1)

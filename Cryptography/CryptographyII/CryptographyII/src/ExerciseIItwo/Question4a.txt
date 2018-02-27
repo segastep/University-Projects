@@ -1,0 +1,13 @@
+Georgi Nikolov                                                                              140367900
+
+Question 4a
+Explain	how	an active attacker Eve can break the Diffie-Hellman key exchange in a concise paragraph.
+
+Answer:
+Since, Diffie-Hellman is non autheticated key exchange, we do not verify the MAC of the machine we are trying to
+connect to, so Eve can act as man in the middle, an once it receives generator, modulus and publicKey from A ( A's msg1)
+it then can establish a session with A, by generating response to A (msg2). Then Eve can establish a second session
+with B, by generating new public key send it to B with the generator and modulus, B will think this data is coming from A
+not Eve, then B will generate it's public key and send it to Eve. Eve will now have two different session establish, and
+it will encrypt all coming data from A then it will decrypt it using the Key established with A and the it will encrypt the
+decrypted data with the key session for B and send it to B and vice versa.

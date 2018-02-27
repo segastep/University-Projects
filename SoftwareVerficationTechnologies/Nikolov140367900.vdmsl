@@ -1,0 +1,243 @@
+module Nikolov140367900
+imports
+from IO
+	operations
+		println renamed println
+		print renamed print
+exports all
+definitions 
+
+
+
+values 
+-- Grid size
+GS : nat = 4;
+-- Formula to calculate max boxes give a grid row size
+MAX_BOXES : nat = (GS-1)**2;
+-- Formula to calculate maximum number of moves given a grid row size
+MAX_MOVES : nat =  2*GS*(GS-1);
+--Compute all dots given a grid size
+MAX_DOTS : nat = (GS*GS)-1;
+types 
+
+-- Player types
+Player = <P1> | <P2>;
+
+-- Seq number of dot in a grid
+Dot = nat
+inv d == d <= MAX_DOTS;
+
+-- Pair of dot's representing a move
+-- valid move is only from left to right or top to bottom
+Move::
+		x: Dot
+		y: Dot
+inv m == m.x<m.y ;
+
+Moves = set of Move
+inv m == card m <= MAX_MOVES;
+
+--
+functions
+
+m: nat -> nat
+m(n) == n;
+
+m_1: nat*nat*nat -> nat
+m_1(n,c,a) == n;
+
+m_2: nat -> nat
+m_2(n) == n;
+
+
+fib: nat -> nat
+fib(n) ==
+	if n = 0 then 0
+	elseif n = 1 then 1
+	else
+	fib(n-2)+fib(n-1)
+	measure m;
+
+fib0: nat * nat * nat -> nat
+fib0(n, prev, curr) == 
+if n = 1 then curr
+else
+fib0(n-1, curr, prev+curr)
+measure m_1;
+
+fib_n: nat -> nat
+fib_n(n) == fib0(n,0,1)
+measure m_2;	
+--translated
+win_box_c: nat * nat -> nat
+win_box_c(p1, p2) == if (p1 > p2) then p1 else p2
+pre end_game(p1,p2);
+
+--translated
+who_wins: nat * nat -> Player
+who_wins(p1_boxes,p2_boxes) == 
+if p1_boxes > p2_boxes then
+<P1>
+else
+<P2>
+pre end_game(p1_boxes,p2_boxes);
+
+--translated
+end_game: nat * nat -> bool
+end_game(p1_boxes,p2_boxes) == 
+						((p1_boxes+p2_boxes) = MAX_BOXES);
+
+-- translated
+make_move: Move * Moves -> Moves
+make_move(mv, all_moves_played) == all_moves_played union {mv}
+pre
+	mv not in set all_moves_played;
+
+-- translated
+check_horizontal_move: Move -> bool
+check_horizontal_move(m) == m.y-m.x = GS;
+
+--translated
+check_vertical_move: Move -> bool
+check_vertical_move(m) == m.y-m.x = 1;
+
+-- no translation needed
+generate_all_moves: () -> set of Move
+generate_all_moves() == generate_all_horizontal() union generate_all_vertical() ;
+											
+-- no translation needed					
+generate_all_horizontal: () -> set of Move
+generate_all_horizontal() == {mk_Move(i, i+GS) | i in set {0,...,MAX_DOTS-GS}};
+
+--no translation needed
+generate_all_vertical: () -> set of Move
+generate_all_vertical() == {mk_Move(i, i+1) | i in set {0,...,MAX_DOTS} & (GS-1)<>(i mod GS)};
+
+--translated
+check_if_move_on_last_row: Move -> bool
+check_if_move_on_last_row(m) == m.y mod GS = GS-1;
+
+--translated
+switch_player: Player -> Player
+switch_player(p) == if (p = <P1>) then <P2> else <P1> 
+post p <> RESULT;
+	
+-- We compute all moves needed to form a box given the X dot in a move, we don't
+check_box: Move*Moves-> bool
+check_box(m, moves_played) ==
+--Move invariant ensures that all operations we perform here will result in valid move
+-- Here we do not determine the move type on purpose, because later on we want to reuse the same function, 
+-- to compute boxes for moves that can form more than one box 
+
+	let m1 = mk_Move(m.x, m.x+GS) in
+	let m2 = mk_Move(m.x, m.x+1) in
+	let m3 = mk_Move(m.x+1, m.x+GS+1) in
+	let m4 = mk_Move(m.x+GS, m.x + GS + 1) in
+	let res = {m1,m2,m3,m4} inter moves_played in
+	card (res) = 4; 
+
+
+state DotsAndBoxes of
+possible_moves : Moves
+moves : Moves
+p1_boxes : nat
+p2_boxes : nat
+curr_player: Player
+inv mk_DotsAndBoxes(possible_moves,moves,p1_boxes,p2_boxes,first) ==
+										p1_boxes+p2_boxes <= MAX_BOXES
+init DotsAndBoxes == DotsAndBoxes = mk_DotsAndBoxes(generate_all_moves(),{} , 0 , 0, <P1>)
+end
+
+operations
+
+--translated
+play_game() ==
+(
+
+	while MAX_MOVES - card moves > 0 do
+			(dcl choice : Move := pick_move();
+				print("\nPlayer _");
+				print(curr_player);
+				print(" made move ");
+				print(choice);
+				make_play(choice)
+				);
+		println("\nPlayer ");
+		print(who_wins(p1_boxes, p2_boxes));
+		print(" won the game with ");
+		print(win_box_c(p1_boxes,p2_boxes));
+		print(" boxes ");
+)
+ext wr possible_moves,moves,p1_boxes,p2_boxes,curr_player
+pre card possible_moves = MAX_MOVES and p1_boxes+p2_boxes = 0 and moves = {}
+post possible_moves = {} and p1_boxes+p2_boxes <= MAX_BOXES and card moves = MAX_MOVES;
+
+--translated
+add_boxes(boxes: nat, curr: Player) ==
+ (
+ 	if (curr = <P1>) then p1_boxes := p1_boxes + boxes
+ 	else p2_boxes := p2_boxes + boxes;
+ 	print("\nPlayer ");print(curr);print(" has made ");print(boxes);print(" new boxes this turn!");
+ )
+ext wr p1_boxes, p2_boxes
+pre p2_boxes + p1_boxes < MAX_BOXES
+post p2_boxes + p1_boxes <= MAX_BOXES;
+
+--translated
+pick_move() m : Move ==
+( dcl choice : Move := let mv in set possible_moves in mv; 
+	possible_moves := possible_moves \ {choice};
+	return choice
+)
+ext wr possible_moves;
+
+--translated
+make_play(this_move : Move) ==
+(dcl box : nat := 0; moves:=make_move(this_move, moves);
+		--println("\nDebug moves-----------------------\n");
+		--println(moves);
+		--println("\nMoves set card");print(card moves);
+		--println("\ntotal boxes so far: ");print(p1_boxes+p2_boxes);
+		--println("\n-------------------------------------");
+	
+		
+		if check_horizontal_move(this_move) then(
+			-- if move is horizontal and on row 0 check only boxes formed below this row
+			if (this_move.x mod GS = 0) and check_box(this_move,moves) then box:= box + 1
+			-- if horizontal move on last row take the move above and check only bottom row boxes, our original move will be computed by the check box function
+			elseif check_if_move_on_last_row(this_move) and check_box(mk_Move(this_move.x-1, this_move.y-1), moves) then box:= box+1
+			--- our move is somewhere in between the first and last row in the grid, so we check the box above it and the box below it
+			elseif (this_move.x > 0) and (this_move.x mod GS <> 0) and not check_if_move_on_last_row(this_move) then(
+				if check_box(this_move,moves) then box:= box + 1;
+				--check box above
+				if check_box(mk_Move(this_move.x-1, this_move.y-1),moves) then box:= box +1;)
+		);
+		
+		
+	if check_vertical_move(this_move) then (
+			 -- handle leftmost vertical moves
+			if (this_move.x <= GS-1) and check_box(this_move,moves) then box:=box+1
+			 --- handle right most vertical moves
+			 elseif(this_move.x div GS >= GS-1) and check_box(mk_Move(this_move.x-GS,this_move.y-GS),moves) then box:=box+1
+			 -- if move is vertical and in between first column and last column check the boxes on left and right
+			 elseif(this_move.x > GS-1) and (this_move.y div GS < GS-1) then(
+			 		--- box to the right
+					if check_box(this_move, moves) then box:=box+1;
+					--- box to the left
+					if check_box(mk_Move(this_move.x-GS, this_move.y-GS),moves) then box:=box+1;
+			)
+			 
+		);
+		
+		-- if any boxes are closed add their count to the current player	
+		if(box<>0) then add_boxes(box, curr_player)
+		else 
+		curr_player := switch_player(curr_player)
+)
+ext rd p2_boxes rd p1_boxes
+		wr moves wr curr_player
+pre MAX_MOVES - card moves > 0;
+
+		
+-- TODO Define operations here
+end Nikolov140367900
